@@ -7,11 +7,9 @@
 			width: 25%;
 			float: left;
 			position: relative;
-
 		}
 		.galleryImg > img{
 			width: 100%;
-
 		}
 		.galleryImg:hover > img{
 			position: absolute;
@@ -23,21 +21,23 @@
 	</style>
 </head>
 
-<body>
+<body style="background-color: #E0FFE5; text-align:center;">
 
+	<h1 style="color:#53131E;">Look at these Beautiful Pictures!</h1>
+
+		<br>
+		
+		<h2 style="color: #F6511D;">Hover over to make the images larger.</h2>
 </body>
 	<script>
-
-	var images = [
+	var images = ['images/7a6f37eded84a07844dc308b8e3fa790.jpg', 'images/maxresdefault.jpg','images/photo-129299193.jpg','images/photographing-landscapes-3e.jpg', 'images/tropical-beach-landscapes.jpg']; 
 		//add images here based on photos in the images folder.
 		//each image name needs to be a string
 		//remember, the images are in a folder called "image"
-	];
-
+	
 	// call one of the functions below.  Give it an argument of the
 	// images array above
 	
-
 	/******** you don't need to modify anything below this line ******/
 	function displayImagesInGallery(imageArray){
 		for(var imageIndex = 0; imageIndex < imageArray.length; imageIndex++){
@@ -45,8 +45,6 @@
 			document.querySelector('body').appendChild(image);
 		}
 	}
-
-
 	function createImageElement(imgSource){
 		var imgContainer = document.createElement('FIGURE');
 		imgContainer.className = "galleryImg"
@@ -55,6 +53,8 @@
 		imgContainer.appendChild(imgElement)
 		return imgContainer;
 	}
+
+		displayImagesInGallery(images);
 
 	</script>
 </html>
